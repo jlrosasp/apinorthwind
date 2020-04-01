@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CuboNorthwind-Web.config Connection String" description="CuboNorthwind Connection String used in web.config by the application to access the database." defaultValue="Data Source=localhost;Catalog=CuboNorthwindISSC811" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\administrador\\Documents\\Visual\ Studio\ 2013\\Projects\\Solution\ API\ REST\ ISSC\ 811\\API\ REST\ Cubo\ Northwind\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CuboNorthwind']/@connectionString" />
+  </parameter>
+</parameters>

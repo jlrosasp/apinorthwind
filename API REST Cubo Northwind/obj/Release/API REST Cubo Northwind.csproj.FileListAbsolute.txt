@@ -1,0 +1,29 @@
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\API REST Cubo Northwind.dll.config
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\API REST Cubo Northwind.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\API REST Cubo Northwind.pdb
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\Newtonsoft.Json.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Net.Http.Formatting.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Cors.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Helpers.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.Cors.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.WebHost.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Mvc.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Razor.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Webpages.Deployment.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Webpages.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Webpages.Razor.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\Newtonsoft.Json.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Net.Http.Formatting.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.Cors.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Razor.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Webpages.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Webpages.Deployment.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Webpages.Razor.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Helpers.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Mvc.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.WebHost.xml
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\obj\Release\API REST Cubo Northwind.dll
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\obj\Release\API REST Cubo Northwind.pdb
+C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\obj\Release\API REST Cubo Northwind.csprojResolveAssemblyReference.cache
