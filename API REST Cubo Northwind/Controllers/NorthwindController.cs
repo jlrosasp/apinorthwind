@@ -109,5 +109,155 @@ namespace API_REST_Cubo_Northwind.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, (object)result);
         }
 
+
+        [HttpGet]
+        [Route("GetItemsByDimension/{dim}/{order}")]
+        public HttpResponseMessage GetItemsByDimension(string dim, string order = "DESC")
+        {
+            string WITH = @"
+                WITH 
+                SET [OrderDimension] AS 
+                NONEMPTY(
+                    ORDER(
+                        {0}.CHILDREN,
+                        {0}.CURRENTMEMBER.MEMBER_NAME, " + order +
+                    @")
+                )
+            ";
+
+            string COLUMNS = @"
+                NON EMPTY
+                {
+                    [Measures].[Fact Ventas Netas]
+                }
+                ON COLUMNS,    
+            ";
+
+            string ROWS = @"
+                NON EMPTY
+                {
+                    [OrderDimension]
+                }
+                ON ROWS
+            ";
+
+            string CUBO_NAME = "[DWH Northwind]";
+            WITH = string.Format(WITH, dim);
+            string MDX_QUERY = WITH + @"SELECT " + COLUMNS + ROWS + " FROM " + CUBO_NAME;
+
+            Debug.Write(MDX_QUERY);
+
+            List<string> dimension = new List<string>();
+            
+            dynamic result = new
+            {
+                datosDimension = dimension
+            };
+
+            using (AdomdConnection cnn = new AdomdConnection(ConfigurationManager.ConnectionStrings["CuboNorthwind"].ConnectionString))
+            {
+                cnn.Open();
+                using (AdomdCommand cmd = new AdomdCommand(MDX_QUERY, cnn))
+                {
+                    //cmd.Parameters.Add("Dimension", dimension);
+                    using (AdomdDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+                    {
+                        while (dr.Read())
+                        {
+                            dimension.Add(dr.GetString(0));
+                        }
+                        dr.Close();
+                    }
+                }
+            }
+
+            return Request.CreateResponse(HttpStatusCode.OK, (object)result);
+        }
+
+        [HttpPost]
+        [Route("GetDataPieByDimension/{dim}/{order}")]
+        public HttpResponseMessage GetDataPieByDimension(string dim, string order, string[] values)
+        {
+            string WITH = @"
+            WITH 
+                SET [OrderDimension] AS 
+                NONEMPTY(
+                    ORDER(
+			        STRTOSET(@Dimension),
+                    [Measures].[Fact Ventas Netas], DESC
+	            )
+            )
+            ";
+
+            string COLUMNS = @"
+                NON EMPTY
+                {
+                    [Measures].[Fact Ventas Netas]
+                }
+                ON COLUMNS,    
+            ";
+
+            string ROWS = @"
+                NON EMPTY
+                {
+                    [OrderDimension]
+                }
+                ON ROWS
+            ";
+
+            string CUBO_NAME = "[DWH Northwind]";
+            //WITH = string.Format(WITH, dim);
+            string MDX_QUERY = WITH + @"SELECT " + COLUMNS + ROWS + " FROM " + CUBO_NAME;
+
+            Debug.Write(MDX_QUERY);
+
+            List<string> dimension = new List<string>();
+            List<decimal> ventas = new List<decimal>();
+            List<dynamic> lstTabla = new List<dynamic>();
+
+            dynamic result = new
+            {
+                datosDimension = dimension,
+                datosVenta = ventas,
+                datosTabla = lstTabla
+            };
+
+            string valoresDimension = string.Empty;
+            foreach (var item in values)
+            {
+                valoresDimension += "{0}.[" + item + "],";
+            }
+            valoresDimension = valoresDimension.TrimEnd(',');
+            valoresDimension = string.Format(valoresDimension, dim);
+            valoresDimension = @"{" + valoresDimension + "}";
+
+            using (AdomdConnection cnn = new AdomdConnection(ConfigurationManager.ConnectionStrings["CuboNorthwind"].ConnectionString))
+            {
+                cnn.Open();
+                using (AdomdCommand cmd = new AdomdCommand(MDX_QUERY, cnn))
+                {
+                    cmd.Parameters.Add("Dimension", valoresDimension);
+                    using (AdomdDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection))
+                    {
+                        while (dr.Read())
+                        {
+                            dimension.Add(dr.GetString(0));
+                            ventas.Add(Math.Round(dr.GetDecimal(1)));
+
+                            dynamic objTabla = new
+                            {
+                                descripcion = dr.GetString(0),
+                                valor = Math.Round(dr.GetDecimal(1))
+                            };
+
+                            lstTabla.Add(objTabla);
+                        }
+                        dr.Close();
+                    }
+                }
+            }
+
+            return Request.CreateResponse(HttpStatusCode.OK, (object)result);
+        }
     }
 }

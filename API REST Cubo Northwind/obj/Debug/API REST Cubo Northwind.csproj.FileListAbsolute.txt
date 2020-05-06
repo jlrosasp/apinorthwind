@@ -24,6 +24,5 @@ C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST I
 C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Helpers.xml
 C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Mvc.xml
 C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\bin\System.Web.Http.WebHost.xml
-C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\obj\Debug\API REST Cubo Northwind.csprojResolveAssemblyReference.cache
 C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\obj\Debug\API REST Cubo Northwind.dll
 C:\Users\administrador\Documents\Visual Studio 2013\Projects\Solution API REST ISSC 811\API REST Cubo Northwind\obj\Debug\API REST Cubo Northwind.pdb
